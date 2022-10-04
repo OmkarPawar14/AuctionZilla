@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+  margin: 0px 10px 0px 10px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.body {
+  height: 100vh;
+}
+
+.navbar {
+  background-color: lavender;
+  /* background-color: #B65FCF; */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.googlebtn {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  float: right;
+
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  float: right;
+
+}
+
+
+
+/* Description Box */
+
+.description-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.inner-dsc {
+  padding: 5px;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: lavender;
+  color: rgb(153, 29, 184);
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgb(153, 29, 184);
+}
+
+btn:disabled {
+  background: #000;
+}
+
+.Cancel {
+  color: red;
+  background-color: #ffcbcb;
+  border: 1px solid red;
+}
+
+.Submit:hover {
+  background-color: rgb(199, 199, 252);
+}
+
+.form-btn {
+  display: flex;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  border: 2.5px solid lavender;
+  border-radius: 10px;
+  /* display: block; */
+  font-size: 15px;
+  padding: 10px;
+  /* width: 100%; */
+}
+
+
+
+
+
+
+
+/* Product Contaainer */
+
+.pd-container {
+  margin: 175px;
+}
+
+/* Auction Card */
+
+.auc-Card {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid rgb(153, 29, 184);
+  border-radius: 15px;
+  flex-direction: column;
+
+
+}
+
+.auc-body {
+  display: flex;
+}
+
+.auc-img {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  height: 250px;
+  width: auto;
+
+
+}
+
+.auc-seller {
+  justify-content: right;
+
+}
+
+.auc-title {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+td {
+  color: rgb(153, 29, 184);
+  font-size: 20px;
+  padding: 7px;
+}
+
+.bid-btn {
+  cursor: pointer;
+  background-color: lavender;
+  color: rgb(153, 29, 184);
+  font-size: 17px;
+  border-radius: 7px;
+  padding: 6px;
+  border: 1px solid rgb(153, 29, 184);
+}
+
+.Cancel-btn {
+  color: red;
+  background-color: #ffcbcb;
+  border: 1px solid red;
+  font-size: 17px;
+  border-radius: 7px;
+  padding: 6px;
+
+}
+
+
+
+
+/* Main app CSS */
+.headline {
+
+  font-size: 50px;
+  /* color: #4B0082 ; */
+  color: #720e9e;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0px 10px 0px;
+
+
+}
+
+.wall-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-auc-1 {
+  display: flex;
+  height: 400px;
+}
+
+
+/* Footer CSS */
+
+
+.footer {
+
+  /* background-color: lavender;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px; */
+  /* flex-direction: column; */
+  /* position: relative; */
+
+  background-color: lavender;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+
+
+}
+
+.contact {
+  display: flex;
+
+
+}
+
+
+.icon {
+  height: 45px;
+}
+
+.love {
+  padding-top: 10px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.p {
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+}
