@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import {db} from "../config/firebase"
-import { collection, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { deleteDoc, doc, updateDoc } from "firebase/firestore";
 import { UserAuth } from '../context/AuthContext'
 import Countdown from "react-countdown";
 

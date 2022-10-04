@@ -1,23 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import aucImg from "../assets/wallpaper/Auction-1.svg";
 
 export const Home = () => {
   return (
     <div className="body">
-      <div className="wall-1">
-        <img className="img-auc-1" src={aucImg} />
-        <div className="headline">Welcome To AuctionZilla..!</div>
+      
+        <div className="headline" bac>Welcome To AuctionZilla..!</div>
         <div className="p">
-          AuctionZilla easy to use, and everything is done on one website.
+        AuctionZilla is a one-stop online bidding system that is easy to use.
         </div>
+      
+      <div className="p">
+      From placing bids to making payments, everything is done on this website.
       </div>
       <div className="p">
-        No need to Authenticate. 🔐 We use Google Authentication.
+      Backed by one of the finest database provided by the Google. In just two steps, you can become the owner of rare and expensive items.
       </div>
-      <div className="p">
-        Become The Owner Of Rare and Expensive Items In Just ✌ Steps.
+      <div className="p">There are no additional costs. No hidden charges.💲.</div>
+
+      <div className="container">
+        <div>Create an Auction Here... </div>
+        <Link to="/auction">Auction</Link> 
+        <div className="container-2">See Auctions Here... </div>
+        <Link to="/create">Create</Link>
       </div>
-      <div className="p">No additional expenses. No hidden Charge💲.</div>
+      <div>
+        <div className="wall-1">
+        <img className="img-auc-1" src={aucImg} /></div>
+     
+        
+      </div>
     </div>
   );
 };
