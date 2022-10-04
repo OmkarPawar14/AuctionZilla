@@ -5,12 +5,13 @@ import aucImg from "../assets/wallpaper/Auction-1.svg";
 export const Home = () => {
   return (
     <div className="body">
-      
+      <div className="wall-1">
+        <img className="img-auc-1" src={aucImg} />
         <div className="headline" bac>Welcome To AuctionZilla..!</div>
         <div className="p">
         AuctionZilla is a one-stop online bidding system that is easy to use.
         </div>
-      
+      </div>
       <div className="p">
       From placing bids to making payments, everything is done on this website.
       </div>
@@ -22,12 +23,10 @@ export const Home = () => {
       <div className="container">
         <div>Create an Auction Here... </div>
         <Link to="/auction">Auction</Link> 
-        <div className="container-2">See Auctions Here... </div>
+         <div className="container-2">See Auctions Here... </div>
         <Link to="/create">Create</Link>
       </div>
       <div>
-        <div className="wall-1">
-        <img className="img-auc-1" src={aucImg} /></div>
      
         
       </div>
