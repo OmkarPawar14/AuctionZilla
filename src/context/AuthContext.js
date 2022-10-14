@@ -1,50 +1,48 @@
 import { useContext, createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, signOut, onAuthStateChanged } from "firebase/auth";
-import  { auth }  from "../config/firebase";
-import { useNavigate } from "react-router-dom";
-import React from 'react';
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../config/firebase";
+
+import React from "react";
+
+// Google Sign in option Code
 
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-    const [user, setUser] =useState({});
-    // const navigate = useNavigate();
+  const [user, setUser] = useState({});
+  // const navigate = useNavigate();
 
-
-    const googleSignIn = () => {
+  const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
-}
-const logOut=()=>{
-    signOut(auth)
-}
+  };
+  const logOut = () => {
+    signOut(auth);
+  };
 
-
-
- useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
-        setUser(currentUser);
-        console.log('User',currentUser)
-        // navigate("/create")
-        
-
-    } );
-    return() =>{
-        unsubscribe();
-    }
-
- },[]); 
-return(
-<AuthContext.Provider value={{googleSignIn, logOut, user}}>
-    {children}
-</AuthContext.Provider>
-);
-    
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      console.log("User", currentUser);
+      // navigate("/create")
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+  return (
+    <AuthContext.Provider value={{ googleSignIn, logOut, user }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const UserAuth = () => {
-    return useContext(AuthContext)
+  return useContext(AuthContext);
 };
-
-

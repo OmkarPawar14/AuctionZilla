@@ -1,7 +1,11 @@
 import React from "react";
+import {motion} from 'framer-motion'
 import googlelogo from "../assets/logo/g-logo.png";
 import auctionzillalogo from "../assets/logo/logo.png";
 import { UserAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
+
+// Navbar Is Here
 
 
 export const Navcomp = () => {
@@ -26,19 +30,50 @@ export const Navcomp = () => {
   return (
     <div className="navbar">
       <div className="site-logo">
-        {<img src={auctionzillalogo} width="180px" />}
+        <Link to="/"><img src={auctionzillalogo} width="180px"/></Link>
+        {/* {<img src={auctionzillalogo} width="180 px" />} */}
+
+
+        
       </div>
 
+        <div className="nav-op">
+      <motion.div whileHover={{ scale: 1.1 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}} >
+        <Link to="/" className="nav-fun">Home</Link>
+       
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.1 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}>
+      <Link to="/auction" className="nav-fun">Auctions</Link>
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.1 }}
+          onHoverStart={(e) => {}}
+          onHoverEnd={(e) => {}}>
+        <Link to='/create' className="nav-fun">Create</Link>
+        </motion.div>
+
+        </div>
+
       <div className="navigation">
+      
+        
         <div className="userauth">
           {user === null ? (
             <button onClick={handleGoogleSignIn} className="googlebtn">
               {<img src={googlelogo} width="35px" />}Sign in With Google
             </button>
           ) : (
-            <button className="btn-logout" onClick={handleSignOut}>
+            <motion.button   whileHover={{ scale: 1.07 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
+            className="btn-logout" onClick={handleSignOut}>
               Logout
-            </button>
+            </motion.button>
           )}
         </div>
       </div>

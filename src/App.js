@@ -11,6 +11,7 @@ import {Footcomp} from './components/Footcomp'
 import ProtectedRoutes from './Routes/ProtectedRoutes';
 
 
+
 function App() {
   return (
       <BrowserRouter>

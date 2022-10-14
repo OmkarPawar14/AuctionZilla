@@ -6,6 +6,8 @@ import { UserAuth } from '../context/AuthContext'
 import Countdown from "react-countdown";
 
 
+// Data Fech From Firebase Code is here
+
 
 export const DataFetcher = () => {
   const { auctions } = useContext(DataContext);
@@ -63,7 +65,7 @@ const cancelAuction = (auctionId)=>{
                 </tr>
               </table>
             </div>
-            <div>
+            <div className="buttons">
               <button className="bid-btn" onClick={() => bidAuction(auction.id, auction.startPrice)}>Bid</button>
               {user.uid === auction.sellerId ? <button className="Cancel-btn" onClick={() => cancelAuction(auction.id)}>Cancel</button> : <button className="Cancel-btn" disabled>Cancel</button>} 
             </div>
